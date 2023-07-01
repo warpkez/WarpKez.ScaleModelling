@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarpKez.ScaleModelling", "WarpKez.ScaleModelling\WarpKez.ScaleModelling.csproj", "{F597C8C4-940F-44DD-9C5F-C752B9C48854}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApplication", "SampleApplication\SampleApplication.csproj", "{FCD7DFB1-7810-4925-BFC1-6C1BCBAEBBF8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F597C8C4-940F-44DD-9C5F-C752B9C48854}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F597C8C4-940F-44DD-9C5F-C752B9C48854}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F597C8C4-940F-44DD-9C5F-C752B9C48854}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F597C8C4-940F-44DD-9C5F-C752B9C48854}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCD7DFB1-7810-4925-BFC1-6C1BCBAEBBF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCD7DFB1-7810-4925-BFC1-6C1BCBAEBBF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCD7DFB1-7810-4925-BFC1-6C1BCBAEBBF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCD7DFB1-7810-4925-BFC1-6C1BCBAEBBF8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BCB1700D-8CEF-4F15-8362-A0281AFDE58F}
+	EndGlobalSection
+EndGlobal
