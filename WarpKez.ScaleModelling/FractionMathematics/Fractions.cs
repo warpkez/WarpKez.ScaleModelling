@@ -154,48 +154,70 @@ public static partial class Fractions
         return FractionDivideMethod(FirstNumerator, FirstDenominator, SecondNumerator, SecondDenominator);
     }
 
+    public static FractionImproperModel LowestCommonDenominator(int Numerator, int Denominator) => LowestCommonDenominatorSanitisor (Numerator, Denominator);
+    public static FractionImproperModel LowestCommonDenominator(FractionModel fractionModel) => LowestCommonDenominatorSanitisor (fractionModel.Numerator, fractionModel.Denominator);
+
+    ///// <summary>
+    ///// Find the lowest common denominator for a fraction.  Pre-sanitises the fraction
+    ///// </summary>
+    ///// <param name="Numerator"></param>
+    ///// <param name="Denominator"></param>
+    ///// <returns></returns>
+    //public static FractionImproperModel LowestCommonDenominator(int Numerator, int Denominator)
+    //{    
+    //    /// If the Numerator or the Denominator
+    //    /// are sanitised this needs to be tracked
+    //    bool n = false, d = false;
+    //    FractionImproperModel? lcd;
+
+    //    /// Sanitise the Numerator and Denominator before passing them to the method
+    //    if (Numerator < 0)
+    //    {
+    //        n = true;
+    //        Numerator *= -1;
+    //    }
+    //    if (Denominator < 0)
+    //    {
+    //        d = true;
+    //        Denominator *= -1;
+    //    }
+
+    //    lcd = LowestCommonDenominatorMethod(Numerator, Denominator);
+
+    //    /// Desanitise the fractions before returning it.
+    //    /// For an improper fraction, this is the unit that has the sign, otherwise
+    //    /// the numerator, but the denominator can also have the negative sign applied.
+    //    if (n || d)
+    //    {
+    //        if (lcd.Unit > 0)
+    //        {
+    //            lcd.Unit *= -1;
+    //        }
+    //        else
+    //        {
+    //            lcd.Numerator *= -1;
+    //        }
+    //    }
+
+    //    return lcd;
+    //}
+
     /// <summary>
-    /// Find the lowest common denominator for a fraction.  Pre-sanitises the fraction
+    /// Returns a Numerator/Denominator of a simplified improper fraction using unit, numerator and denominator.
     /// </summary>
+    /// <param name="Unit"></param>
     /// <param name="Numerator"></param>
     /// <param name="Denominator"></param>
     /// <returns></returns>
-    public static FractionImproperModel LowestCommonDenominator(int Numerator, int Denominator)
-    {    
-        /// If the Numerator or the Denominator
-        /// are sanitised this needs to be tracked
-        bool n = false, d = false;
-        FractionImproperModel? lcd;
+    public static FractionModel Fraction(int Unit, int Numerator, int Denominator) => new()
+    {
+        Numerator = (Unit * Denominator) + Numerator,
+        Denominator = Denominator
+    };
 
-        /// Sanitise the Numerator and Denominator before passing them to the method
-        if (Numerator < 0)
-        {
-            n = true;
-            Numerator *= -1;
-        }
-        if (Denominator < 0)
-        {
-            d = true;
-            Denominator *= -1;
-        }
-
-        lcd = LowestCommonDenominatorMethod(Numerator, Denominator);
-
-        /// Desanitise the fractions before returning it.
-        /// For an improper fraction, this is the unit that has the sign, otherwise
-        /// the numerator, but the denominator can also have the negative sign applied.
-        if (n || d)
-        {
-            if (lcd.Unit > 0)
-            {
-                lcd.Unit *= -1;
-            }
-            else
-            {
-                lcd.Numerator *= -1;
-            }
-        }
-
-        return lcd;
-    }
+    public static FractionModel Fraction(FractionImproperModel fractionImproper) => new()
+    {
+        Numerator = (fractionImproper.Unit * fractionImproper.Denominator) + fractionImproper.Numerator,
+        Denominator = fractionImproper.Denominator
+    };
 }
