@@ -100,6 +100,12 @@ public static partial class Fractions
         return fraction;
     }
 
+    /// <summary>
+    /// Temporarily sanitise the fraction to prevent possibility of integer overflow.
+    /// </summary>
+    /// <param name="Numerator"></param>
+    /// <param name="Denominator"></param>
+    /// <returns></returns>
     private static FractionImproperModel LowestCommonDenominatorSanitisor(int Numerator, int Denominator) 
     {
         /// If the Numerator or the Denominator
@@ -124,7 +130,8 @@ public static partial class Fractions
         /// Desanitise the fractions before returning it.
         /// For an improper fraction, this is the unit that has the sign, otherwise
         /// the numerator, but the denominator can also have the negative sign applied.
-        if (n || d)
+        /// If both are negative, then it should be ignored completely - negatives cancel each other out
+        if ((n || d) && !(n && d))//(n || d)
         {
             if (lcd.Unit > 0)
             {
