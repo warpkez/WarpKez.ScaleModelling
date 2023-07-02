@@ -100,6 +100,45 @@ public static partial class Fractions
         return fraction;
     }
 
+    private static FractionImproperModel LowestCommonDenominatorSanitisor(int Numerator, int Denominator) 
+    {
+        /// If the Numerator or the Denominator
+        /// are sanitised this needs to be tracked
+        bool n = false, d = false;
+        FractionImproperModel? lcd;
+
+        /// Sanitise the Numerator and Denominator before passing them to the method
+        if (Numerator < 0)
+        {
+            n = true;
+            Numerator *= -1;
+        }
+        if (Denominator < 0)
+        {
+            d = true;
+            Denominator *= -1;
+        }
+
+        lcd = LowestCommonDenominatorMethod(Numerator, Denominator);
+
+        /// Desanitise the fractions before returning it.
+        /// For an improper fraction, this is the unit that has the sign, otherwise
+        /// the numerator, but the denominator can also have the negative sign applied.
+        if (n || d)
+        {
+            if (lcd.Unit > 0)
+            {
+                lcd.Unit *= -1;
+            }
+            else
+            {
+                lcd.Numerator *= -1;
+            }
+        }
+
+        return lcd;
+    }
+
     /// <summary>
     /// Find the lowest common denomoniator
     /// </summary>

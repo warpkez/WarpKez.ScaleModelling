@@ -31,8 +31,11 @@ public class ImperialMeasurementModel
 public class ImperialClosestFractionModel
 {
     public FractionImproperModel? LowerCommonFraction { get; set; }
+    public double LowerInchDecimal { get; set; } = 0.0;
     public FractionImproperModel? InchAsFraction { get; set; }
+    public double InchesAsDecimal { get; set; } = 0.0;
     public FractionImproperModel? UpperCommonFraction { get; set; }
+    public double UpperInchDecimal { get; set; } = 0.0;
 }
 
 public class ImperialInchModel
