@@ -23,7 +23,7 @@ Methods and models for performing mathematical functions on fractions such as
 Methods and models for performing conversion between metric systems specifically imperial and metric measurements relating to distance
 - Converting yard to feet, then to inches,
 - Converting imperial to metric,
-- Determinging the closest inch, above and below the given to 1/64th precision. (*I am flat out seeing 1/32*) 
+- Determinging the closest inch, above and below the given to 1/64th precision. (*I am flat out seeing 1/32"*) 
 
 ### Scale Class
 
