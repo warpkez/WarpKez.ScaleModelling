@@ -3,13 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarpKez.ScaleModelling", "WarpKez.ScaleModelling\WarpKez.ScaleModelling.csproj", "{F597C8C4-940F-44DD-9C5F-C752B9C48854}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WarpKez.ScaleModelling", "WarpKez.ScaleModelling\WarpKez.ScaleModelling.csproj", "{F597C8C4-940F-44DD-9C5F-C752B9C48854}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApplication", "SampleApplication\SampleApplication.csproj", "{FCD7DFB1-7810-4925-BFC1-6C1BCBAEBBF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleApplication", "SampleApplication\SampleApplication.csproj", "{FCD7DFB1-7810-4925-BFC1-6C1BCBAEBBF8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2EBBE3ED-051D-417B-9FFD-AFBF41A49522}"
 	ProjectSection(SolutionItems) = preProject
 		LICENSE.txt = LICENSE.txt
+		.github\workflows\githubfeed.yml = .github\workflows\githubfeed.yml
 		README.md = README.md
 	EndProjectSection
 EndProject
