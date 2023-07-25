@@ -15,9 +15,9 @@ jobs:
 
       - name: Get version from tag
         id: version
-        uses: warpkez/get-version
-        with:
-          tag: ${{ github.ref }}
+        uses: warpkez/get-version@main
+        #with:
+        #  tag: ${{ github.ref }}
 
       - name: Use the version
         run: echo "The version is ${{ steps.version.outputs.ver }}"
