@@ -15,7 +15,7 @@ jobs:
 
       - name: Get version from tag
         id: version
-        uses: warpkez/get-version@main
+        uses: warpkez/get-version@v1
         #with:
         #  tag: ${{ github.ref }}
 
