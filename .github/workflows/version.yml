@@ -14,10 +14,10 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Get version from tag
-        id: version
-        uses: warpkez/get-version@v1.1
+        id: getversion
+        uses: warpkez/getversion@v2
         #with:
         #  tag: ${{ github.ref }}
 
       - name: Use the version
-        run: echo "The version is ${{ steps.version.outputs.ver }}"
+        run: echo "The version is ${{ steps.version.outputs.rel_version }}"
