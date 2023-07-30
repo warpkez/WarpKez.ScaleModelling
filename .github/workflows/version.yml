@@ -20,4 +20,4 @@ jobs:
         #  tag: ${{ github.ref }}
 
       - name: Use the version
-        run: echo "The version is ${{ steps.version.outputs.rel_version }}"
+        run: echo "The version is ${{ steps.getversion.outputs.rel_version }}"
