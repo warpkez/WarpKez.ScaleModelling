@@ -1,8 +1,8 @@
 name: Get Version
 
 on:
-  #workflow_dispatch:
-  push:
+  workflow_dispatch:
+  #push:
     tags:
       - 'v*' # Run this workflow when a tag starting with 'v' is pushed
 
